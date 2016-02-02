@@ -33,8 +33,13 @@ public class Notebook {
 
     //numberOfPages
     public int getNumberOfPages() { return numberOfPages; }
-    public void setNumberOfPages(int numberOfPages) { this.numberOfPages = numberOfPages; }
-
+    public void setNumberOfPages(int numberOfPages) {
+        if (numberOfPages < 500) {
+            this.numberOfPages = numberOfPages;
+        } else {
+            System.out.println("You entered an absurd amount for number of pages. Try again");
+        }
+    }
     /** end of getters and setters **/
 
 }

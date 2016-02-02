@@ -1,3 +1,5 @@
+import java.rmi.NotBoundException;
+
 /**
  * Created by branden on 2/1/16.
  */
@@ -23,12 +25,17 @@ public class Vehicle {
 
     //Model
     public String getModel() { return model; }
-    public void setModel(String model) { this.model = model;  }
+    public void setModel(String model) { this.model = model; }
 
     //year
     public int getYear() { return year; }
-    public void setYear(int year) { this.year = year; }
-
+    public void setYear(int year) {
+        if (isPositive(year)) {
+            this.year = year;
+        } else {
+            this.year = 1; //this is for testing. This else statement should throw an exception.
+        }
+    }
     //doors
     public int getDoors() { return doors;  }
     public void setDoors(int doors) { this.doors = doors; }
@@ -42,6 +49,21 @@ public class Vehicle {
     public void setAutomatic(boolean automatic) { this.isAutomatic = automatic;  }
 
     /** end of getters and setters **/
+
+    //Method to check for positive numbers
+    public boolean isPositive(int numberToCheck) {
+        if (numberToCheck >= 0) {
+            return true;
+        } else {
+            return false; }
+    }
+
+    public boolean isPositive(double numberToCheck) {
+        if (numberToCheck >= 0) {
+            return true;
+        } else {
+            return false; }
+    }
 
 
 }

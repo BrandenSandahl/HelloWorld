@@ -33,7 +33,13 @@ public class Phone {
 
     // brand
     public String getBrand() {  return brand;  }
-    public void setBrand(String brand) { this.brand = brand; }
+    public void setBrand(String brand) {
+        if (brand.length() > 100) {
+            this.brand = "There was an error";
+        } else {
+            this.brand = brand;
+        }
+    }
 
     // modeYear
     public int getModelYear() { return modelYear; }

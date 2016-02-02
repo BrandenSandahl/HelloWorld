@@ -25,7 +25,13 @@ public class Television {
 
     // size
     public int getSize() {  return size;  }
-    public void setSize(int size) { this.size = size;  }
+    public void setSize(int size) {
+        if (size > 200) {
+            System.out.println("I'm not sure that they make TV's this large. Are you using inches?");
+        } else {
+            this.size = size;
+        }
+    }
 
     // model
     public String getModel() {  return model;  }
