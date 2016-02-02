@@ -3,49 +3,45 @@
  */
 public class Vehicle {
 
-    public String model;
-    public int year;
-    public int doors;
-    public double gasLevel;   //enter as percent
-    public boolean automatic = true; //if false, car is a manual.
+    private String model;
+    private int year;
+    private int doors;
+    private double gasLevel;   //enter as percent
+    private boolean isAutomatic = true; //if false, car is a manual.
 
-    public String getModel() {
-        return model;
+    //begin constuctors
+
+    public Vehicle(String model, int year, int doors, double gasLevel, boolean isAutomatic) {
+        setModel(model);
+        setYear(year);
+        setDoors(doors);
+        setGasLevel(gasLevel);
+        setAutomatic(isAutomatic);
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+    /** begin of getters and setters **/
 
-    public int getYear() {
-        return year;
-    }
+    //Model
+    public String getModel() { return model; }
+    public void setModel(String model) { this.model = model;  }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
+    //year
+    public int getYear() { return year; }
+    public void setYear(int year) { this.year = year; }
 
-    public int getDoors() {
-        return doors;
-    }
+    //doors
+    public int getDoors() { return doors;  }
+    public void setDoors(int doors) { this.doors = doors; }
 
-    public void setDoors(int doors) {
-        this.doors = doors;
-    }
+    //gaslevel
+    public double getGasLevel() { return gasLevel; }
+    public void setGasLevel(double gasLevel) { this.gasLevel = gasLevel;  }
 
-    public double getGasLevel() {
-        return gasLevel;
-    }
+    //isAutomatic
+    public boolean getAutomatic() { return isAutomatic;  }
+    public void setAutomatic(boolean automatic) { this.isAutomatic = automatic;  }
 
-    public void setGasLevel(double gasLevel) {
-        this.gasLevel = gasLevel;
-    }
+    /** end of getters and setters **/
 
-    public boolean isAutomatic() {
-        return automatic;
-    }
 
-    public void setAutomatic(boolean automatic) {
-        this.automatic = automatic;
-    }
 }
