@@ -21,7 +21,7 @@ public class Phone {
         setUnlocked(isUnlocked);
     }
 
-    /** start of constructors **/
+    /** start of getters and setters **/
 
     // price
     public double getPrice() { return price; }
@@ -49,5 +49,5 @@ public class Phone {
     public boolean getIsUnlocked() {  return isUnlocked;  }
     public void setUnlocked(boolean unlocked) { this.isUnlocked = unlocked;  }
 
-    /** end of constructors **/
+    /** end of getters and setters **/
 }
