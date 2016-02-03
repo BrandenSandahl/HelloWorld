@@ -35,11 +35,25 @@ public class Television {
 
     // model
     public String getModel() {  return model;  }
-    public void setModel(String model) {  this.model = model;  }
+    public void setModel(String model) {
+        if (model.contains(" ")) {
+            System.out.println("Model may not contain spaces");
+        } else {
+            this.model = model;
+        }
+    }
+
 
     // brand
     public String getBrand() { return brand;  }
-    public void setBrand(String brand) { this.brand = brand;  }
+    public void setBrand(String brand) {
+        if (brand.equalsIgnoreCase("sony")) {
+            this.brand = brand;
+        } else {
+            this.brand = "error";
+            System.out.println("We are a Sony store. We only carry Sonys!"); //Is Sony still around?
+        }
+    }
 
     // isRefurbished
     public boolean getIsRefurbished() { return isRefurbished;  }
