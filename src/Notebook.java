@@ -27,6 +27,7 @@ public class Notebook {
     public double getHeight() { return height; }
     public void setHeight(double height) { this.height = height; }
 
+
     //paperType
     public String getPaperType() { return paperType; }
     public void setPaperType(String paperType) { this.paperType = paperType; }
@@ -37,7 +38,7 @@ public class Notebook {
         if (numberOfPages < 500) {
             this.numberOfPages = numberOfPages;
         } else {
-            System.out.println("You entered an absurd amount for number of pages. Try again");
+            System.out.println("You've entered an absurd amount for number of pages. Try again");
         }
     }
     /** end of getters and setters **/
