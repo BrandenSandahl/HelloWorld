@@ -25,7 +25,7 @@ public class ReadWriteJSON {
         fw.close();
 
 
-        //ready JSON
+        //read JSON
         Scanner s = new Scanner(f);  //scanner from our file
         s.useDelimiter("\\Z");  //delimiter to read until end of file
         String contents = s.next();  //next to pull until delimiter
