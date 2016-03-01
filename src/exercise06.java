@@ -26,6 +26,7 @@ public class exercise06 {
 
         HashMap<String, String> nameMap = new HashMap<>();
 
+       //if uneven number of items in this list you will get an out of bounds error
         for (int i = 0; i < reversedNames.size(); i+=2) {
             nameMap.put(reversedNames.get(i), reversedNames.get(i + 1));
         }
